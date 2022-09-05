@@ -1,6 +1,6 @@
 <template>
-    <select class="border form-select font-bold md:w-[81.5%] w-[85%] border-zinc-500 p-1" v-model="select"
-        @change="exportValue">
+    <select class="border form-select font-bold cursor-pointer w-[85%] border-zinc-500 p-1 md:w-[81.5%]"
+        v-model="select" @change="exportValue">
         <option value="0">Select Country</option>
         <option v-for="country in Countries" :key="country.ID" :value="Countries.indexOf(country)+1">
             {{ country.Country }}</option>

@@ -49,8 +49,9 @@
 
         return data;
       },
-      updateValue(newTitle) {
+      async updateValue(newTitle) {
         if (newTitle == 0) {
+          const data = await this.fetchData();
           this.currentTitle = 'Global';
           this.allInfo.newConfirmed = data.Global.NewConfirmed;
           this.allInfo.totalConfirmed = data.Global.TotalConfirmed;
